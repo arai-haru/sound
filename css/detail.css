@@ -1,0 +1,197 @@
+.wrap > img{
+  width: 50px;
+  height: 40px;
+}
+#pin1{
+  float: left;
+  margin: 17px 0 0 30px;
+}
+#pin2{
+  float: right;
+  margin: 17px 30px 0 0;
+}
+
+.size18{
+  text-align: center;
+  font-size: 18px;
+}
+#board{
+	width: 90%;
+	background-color: #F3FFD8;
+  margin: 10px auto;
+  padding: 20px 5px 5px 10px;
+  box-shadow: 1.5px 1.5px 3px;
+}
+
+
+#size18_left {
+  font-size: 18px;
+  text-shadow: 1px 1px 2px #0f0;
+  font-weight: bold;
+}
+
+#botan{
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  color: #fff;
+  float: right;
+}
+
+.favolit_f {
+  width: 100px;
+  background-color: #ff9872;
+  display: flex;
+  line-height: 30px;
+  cursor: pointer;
+}
+.favolit_p {
+  width: 100px;
+  background-color: #ff9872;
+  display: flex;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.icon_on img{
+  margin: 0 10px 0 auto;
+  width: 25px;
+  height: 25px;
+}
+
+.off{
+  margin: auto 0;
+}
+.off img{
+  margin: auto 0;
+  width: 15px;
+  height: 15px;
+}
+
+#group{
+  width: 30%;
+}
+#group a{
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+.pink{
+  text-align: center;
+  color: #FF69A3;
+}
+
+.flex img{
+  width: 20%;
+  border: 1px solid #000;
+  margin: 0 10px;
+  clear: both;
+}
+.flex{
+  display: flex;
+  margin-top: 10px;
+}
+
+#title{
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
+}
+#title h3{
+  font-size: 12px;
+  margin-left: 10px;
+}
+#title p{
+  margin: 10px;
+}
+.border{
+  border-bottom: 1px solid gray;
+  margin: 10px;
+  padding: 5px;
+}
+.border h3{
+  font-weight: bold;
+  font-size: 13px;
+  color: gray;
+}
+.border p{
+  white-space: pre-wrap;
+}
+#list_de{
+  width: 80%;
+  border: 1px solid #000;
+  margin: 20px auto;
+}
+#promote{
+  display: flex;
+}
+#wid50{
+  width: 50%;
+}
+#ticket{
+  width: 70%;
+  margin: auto;
+}
+.break h3{
+  font-size: 13px;
+  color: gray;
+}
+.break p{
+  white-space: pre-wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .flex{
+    display: block;
+  }
+  .flex img{
+    margin: 0;
+    width: 200px;
+    height: 300px;
+    margin: auto;
+  }
+  #title{
+    width: 90%;
+    margin: auto;
+  }
+  #title p{
+    margin: 5px;
+  }
+  #size18_left{
+    text-align: center;
+  }
+  #title h3{
+    margin-left: 5px;
+  }
+  #day{
+    display: flex;
+  }
+  #time{
+    display: flex;
+  }
+  #place{
+    display: flex;
+    margin: auto;
+  }
+  #wid50{
+    width: 80%;
+    margin: 10px auto;
+  }
+  #list_de{
+    width: 300px;
+  }
+  #group{
+    width: auto;
+    margin: auto;
+  }
+  .pink{
+    display: none;
+  }
+  #promote{
+    display: block;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  #day{
+    display: block;
+  }
+}

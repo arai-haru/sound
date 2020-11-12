@@ -1,0 +1,98 @@
+p{
+  text-align: center;
+}
+.size18{
+  font-size: 18px;
+}
+#delet{
+  width: 170px;
+  margin: 10px 5px 10px auto;
+  border: 3px solid #000;
+  background-color: #5d99ff;
+  text-align: center;
+}
+#delet a{
+  color: #fff;
+}
+table{
+	margin: 20px auto;
+}
+.size14{
+  font-size: 14px;
+}
+tr{
+	height: 45px;
+}
+td{
+	padding-left: 20px;
+}
+table input{
+  width: 200px;
+  height: 25px;
+}
+textarea{
+  width: 250px;
+  height: 150px;
+  margin: 10px auto;
+}
+
+.botan{
+  width: 70px;
+  margin: 30px auto 40px auto;
+}
+.submit{
+	height: 30px;
+}
+.sinki{
+  margin: 10px 0;
+}
+.sinki a{
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+#conplete{
+  margin-top: 50px;
+}
+
+.gakki{
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  border-radius: 30%;
+  cursor: pointer;
+}
+.part{
+  display: flex;
+  flex-wrap: wrap;
+}
+.back_y{
+  width: 400px;
+  background-color: #F3FFD8;
+}
+.back_y img{
+  width: 250px;
+  height: 250px;
+  margin: 10px auto;
+  border-radius: 30%;
+}
+.back_y button{
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  textarea{
+    width: 150px;
+  }
+  table input{
+    width: 150px;
+  }
+  td{
+  	padding-left: 10px;
+  }
+  #delet{
+    width: 130px;
+  }
+  #delet a{
+    font-size: 12px;
+  }
+}

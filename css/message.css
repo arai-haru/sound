@@ -1,0 +1,55 @@
+p{
+  text-align: center;
+}
+h3{
+  white-space: pre-wrap;
+  margin-left: auto;
+  text-align: center;
+}
+#sukima{
+  height: 3px;
+}
+
+.pin1{
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  left: 47%;
+}
+.size12{
+  font-size: 12px;
+}
+form{
+  width: 300px;
+  margin: 20px auto;
+}
+textarea{
+  margin-top: 10px;
+  height: 100px;
+}
+.botan{
+  width: 43px;
+  margin: 30px auto;
+}
+.size12 a{
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+.list{
+  width: 60%;
+}
+.flex{
+  min-width: 110px;
+  margin-left: auto;
+}
+.flex p{
+  margin: 0 5px;
+}
+.right{
+  margin-left: auto;
+}
+@media screen and (max-width: 690px) {
+  .list{
+    width: 80%;
+  }
+}

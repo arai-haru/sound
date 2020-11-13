@@ -171,7 +171,6 @@ INSERT INTO `promots` (`id`, `name`, `kana`, `email`, `password`, `role`, `group
 (1, 'キャベツ', 'きゃべつ', 'ghij@el.jp', '$2y$10$RQCCC3JxweKvhNt3kflfi.bF0wFukO2r15hahon2sH7sBRNiIuoLK', 1, 'キャベツ高校', '高校', '構成人数\r\nパート募集中\r\n活動中\r\nコンクールに出場、東関東大会まで出場経験あり', '2020-10-26 01:50:30', '2020-10-30 11:58:52', NULL, 'FALSE'),
 (2, 'にんじん', 'ニンジン', 'ninzin@com.jp', '$2y$10$vL/K3tyQi4ccgU/iKZIhTOf5ujw9nxLwOIa5e0F/ZdP8CfcSJjKiW', 1, 'にんじん中学', '中学校', '野菜\r\n色とりどり', '2020-10-26 01:53:32', '1000-01-01 00:00:00', NULL, 'FALSE'),
 (3, 'なす', 'ナス', 'nasu@com.jp', '$2y$10$CxqPOcPoGuO016jbctJpE.VaDSyPMUBzC9Ei73iBI3zk/pW5SU8FK', 1, 'なす団体', '大学', 'なすなす', '2020-10-26 02:35:34', '2020-10-26 11:37:08', NULL, 'FALSE'),
-(4, 'パソコン', 'パソコン', 'perc_ko.3984sin@icloud.com', '$2y$10$4SedB2ZN3575bpS5GdSALeMpauufIzDlwNsYjcKvWBKH2XnEJKPAW', 1, '高等学校', '高校', 'みんな仲良し\r\n毎日活動中\r\n演奏会は年に２.3回あります。また、コンクールにも出場いたします。', '2020-10-29 07:39:07', '1000-01-01 00:00:00', '1604043531_efd46b8f9afd91b904edef7ad84db416310682c59f3591bbb01713803251a546', 'FALSE'),
 (6, 'よな', 'ヨナ', 'yona@com.jp', '$2y$10$wfsX1WPAwBggX7OHHAbtkevYx24PcpcGx6J0qeYRqUTHkJRXUC5dG', 1, '暗黒龍と愉快な仲間たち', '社会人', '主と４龍と暗黒龍と美少年一行が織りなす愉快な演奏会です。', '2020-11-02 02:08:27', '1000-01-01 00:00:00', NULL, 'FALSE'),
 (7, '主催者', 'シュサイシャ', 'syusai@com.jp', '$2y$10$YfP1FNr8qIEwfdtjioDsiuC7tQuilngIDS6KCXH15sIyL5Y2joQyi', 1, '主催団体', '社会人', '主催者の団体です', '2020-11-12 09:28:14', '1000-01-01 00:00:00', NULL, 'FALSE');
 
@@ -262,7 +261,7 @@ CREATE TABLE `users` (
 -- テーブルのデータのダンプ `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `kana`, `email`, `password`, `role`, `created_at`, `updated_at`, `token`, `delete_flg`) VALUES 
+INSERT INTO `users` (`id`, `name`, `kana`, `email`, `password`, `role`, `created_at`, `updated_at`, `token`, `delete_flg`) VALUES
 (2, '雪', 'ユキ', 'ghij@ek.jp', '$2y$10$zV7C/sEYCXo2D7cQ43ZZ/OF2VV2rqalDMRyjZxOkSaDUTcY5VPj9K', 0, '2020-10-26 01:48:49', '2020-10-29 18:05:31', NULL, 'FALSE'),
 (1, 'テスト', 'テスト', 'test.test@com.jp', '$2y$10$UrBSFe3XkQaDVdZz0sf9w.7cgVbsb41OMPgr3FpWr1EBqxtuvWkSK', 0, '2020-11-12 09:26:23', '1000-01-01 00:00:00', NULL, 'FALSE');
 

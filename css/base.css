@@ -64,6 +64,7 @@ body{
 	background-image: url(../image/image8-2-2.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 	display: flex;
   flex-flow: column;
 	min-height: 100vh;

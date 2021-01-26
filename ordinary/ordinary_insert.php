@@ -1,10 +1,4 @@
 <?php
-$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
-
-if($referer != "http://".$_SERVER["HTTP_HOST"]."/php_code/ordinary/login.php"){
-  header('Location:../ordinary/login.php');
-  exit;
-}
 
 session_start();
 require_once "../config/config.php";
@@ -46,31 +40,25 @@ session_destroy();
     <div class="login">
       <div class="wrap">
         <p class="p_head">一般新規登録</p>
-        <span>
-          <p><?php if(isset($message['name'])) echo $message['name'];?></p>
-          <p><?php if(isset($message['kana'])) echo $message['kana'];?></p>
-          <p><?php if(isset($message['email'])) echo $message['email'];?></p>
-          <p><?php if(isset($message['password'])) echo $message['password'];?></p>
-        </span>
 
         <form action="ordinary_confirm.php" method="post">
           <table>
             <th class="size14"><span>*</span>は必須項目です。</th>
             <p class="size14">ご登録いただいたメールアドレス宛に<br>通知が届くようになっています。</p>
             <tr>
-              <th>氏名<span>*</span></th>
+              <th>氏名<span>*</span><br><span><?php if(isset($message['name'])) echo $message['name'];?></span></th>
               <td><input type="text" name="name" value="<?php if(isset($_SESSION['name'])) echo h($_SESSION['name']);?>"></td>
             </tr>
             <tr>
-              <th>フリガナ<span>*</span></th>
+              <th>フリガナ<span>*</span><br><span><?php if(isset($message['kana'])) echo $message['kana'];?></span></th>
               <td><input type="text" name="kana" value="<?php if(isset($_SESSION['kana'])) echo h($_SESSION['kana']);?>"></td>
             </tr>
             <tr>
-              <th>メールアドレス<span>*</span></th>
+              <th>メールアドレス<span>*</span><br><span><?php if(isset($message['email'])) echo $message['email'];?></span></th>
               <td><input type="text" name="email" value="<?php if(isset($_SESSION['email'])) echo h($_SESSION['email']);?>"></td>
             </tr>
             <tr>
-              <th>パスワード<span>*</span></th>
+              <th>パスワード<span>*</span><br><span><?php if(isset($message['password'])) echo $message['password'];?></span></th>
               <td><input type="password" name="password" value="<?php if(isset($_SESSION['password'])) echo h($_SESSION['password']);?>"></td>
             </tr>
           </table>

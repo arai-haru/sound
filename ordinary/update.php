@@ -85,12 +85,7 @@ catch(PDOException $e){
     <div class="login">
       <div class="wrap">
         <p class="p_head">登録情報変更</p>
-        <span>
-          <p><?php if(isset($message['name'])) echo $message['name'];?></p>
-          <p><?php if(isset($message['kana'])) echo $message['kana'];?></p>
-          <p><?php if(isset($message['email'])) echo $message['email'];?></p>
-          <p><?php if(isset($message['password'])) echo $message['password'];?></p>
-        </span>
+
         <div id="delet">
           <a href="?del=<?= $result['User']['id']?>" onClick="if(!confirm('お使いのアカウントが削除されますがよろしいですか？')) return false;">アカウントを削除する</a>
         </div>
@@ -98,19 +93,19 @@ catch(PDOException $e){
           <table>
             <th id="size14"><span>*</span>は必須項目です。</th>
             <tr>
-              <th>氏名<span>*</span></th>
+              <th>氏名<span>*</span><br><span><?php if(isset($message['name'])) echo $message['name'];?></span></th>
               <td><input type="text" name="name" value="<?= $result['User']['name']?>"></td>
             </tr>
             <tr>
-              <th>フリガナ<span>*</span></th>
+              <th>フリガナ<span>*</span><br><span><?php if(isset($message['kana'])) echo $message['kana'];?></span></th>
               <td><input type="text" name="kana" value="<?= $result['User']['kana']?>"></td>
             </tr>
             <tr>
-              <th>メールアドレス<span>*</span></th>
+              <th>メールアドレス<span>*</span><br><span><?php if(isset($message['email'])) echo $message['email'];?></span></th>
               <td><input type="text" name="email" value="<?= $result['User']['email']?>"></td>
             </tr>
             <tr>
-              <th>パスワード<span>*</span></th>
+              <th>パスワード<span>*</span><br><span><?php if(isset($message['password'])) echo $message['password'];?></span></th>
               <td><input type="password" name="password"></td>
             </tr>
           </table>

@@ -1,10 +1,4 @@
 <?php
-$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
-
-if($referer != "http://".$_SERVER["HTTP_HOST"]."/php_code/promote/login.php"){
-  header('Location:../promote/login.php');
-  exit;
-}
 
 session_start();
 require_once "../config/config.php";
@@ -45,36 +39,29 @@ catch(PDOException $e){
     <div class="login">
       <div class="wrap">
         <p class="p_head">主催者新規登録</p>
-        <span>
-          <p><?php if(isset($message['name'])) echo $message['name'];?></p>
-          <p><?php if(isset($message['kana'])) echo $message['kana'];?></p>
-          <p><?php if(isset($message['email'])) echo $message['email'];?></p>
-          <p><?php if(isset($message['password'])) echo $message['password'];?></p>
-          <p><?php if(isset($message['group_name'])) echo $message['group_name'];?></p>
-          <p><?php if(isset($message['group_detail'])) echo $message['group_detail'];?></p>
-        </span>
+
         <form action="promote_confirm.php" method="post">
           <table>
             <th class="size14"><span>*</span>は必須項目です。</th>
             <p class="size14">登録いただいたメールアドレスあてに<br>管理者からメッセージがある可能性が<br>ありますのでご了承ください</p>
             <tr>
-              <th>代表者氏名<span>*</span></th>
+              <th>代表者氏名<span>*</span><br><span><?php if(isset($message['name'])) echo $message['name'];?></span></th>
               <td><input type="text" name="name" value="<?php if(isset($_SESSION['name'])) echo h($_SESSION['name']);?>"></td>
             </tr>
             <tr>
-              <th>フリガナ<span>*</span></th>
+              <th>フリガナ<span>*</span><br><span><?php if(isset($message['kana'])) echo $message['kana'];?></span></th>
               <td><input type="text" name="kana" value="<?php if(isset($_SESSION['kana'])) echo h($_SESSION['kana']);?>"></td>
             </tr>
             <tr>
-              <th>メールアドレス<span>*</span></th>
+              <th>メールアドレス<span>*</span><br><span><?php if(isset($message['email'])) echo $message['email'];?></span></th>
               <td><input type="text" name="email" value="<?php if(isset($_SESSION['email'])) echo h($_SESSION['email']);?>"></td>
             </tr>
             <tr>
-              <th>パスワード<span>*</span></th>
+              <th>パスワード<span>*</span><br><span><?php if(isset($message['password'])) echo $message['password'];?></span></th>
               <td><input type="password" name="password" value="<?php if(isset($_SESSION['password'])) echo h($_SESSION['password']);?>"></td>
             </tr>
             <tr>
-              <th>団体名<span>*</span></th>
+              <th>団体名<span>*</span><br><span><?php if(isset($message['group_name'])) echo $message['group_name'];?></span></th>
               <td><input type="text" name="group_name" value="<?php if(isset($_SESSION['group_name'])) echo h($_SESSION['group_name']);?>"></td>
             </tr>
             <tr>
@@ -89,7 +76,7 @@ catch(PDOException $e){
               </td>
             </tr>
             <tr>
-              <th>団体説明<span>*</span></th>
+              <th>団体説明<span>*</span><br><span><?php if(isset($message['group_detail'])) echo $message['group_detail'];?></span></th>
               <td><textarea type="text" name="group_detail"><?php if(isset($_SESSION['group_detail'])) echo h($_SESSION['group_detail']);?></textarea></td>
             </tr>
           </table>

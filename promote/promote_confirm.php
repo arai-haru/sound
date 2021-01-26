@@ -1,10 +1,4 @@
 <?php
-$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
-
-if($referer != "http://".$_SERVER["HTTP_HOST"]."/php_code/promote/promote_insert.php"){
-  header('Location:../promote/login.php');
-  exit;
-}
 
 session_start();
 require_once "../config/config.php";

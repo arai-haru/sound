@@ -1,10 +1,4 @@
 <?php
-$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
-
-if($referer != "http://".$_SERVER["HTTP_HOST"]."/php_code/ordinary/ordinary_confirm.php"){
-  header('Location:../ordinary/login.php');
-  exit;
-}
 
 require_once "../config/config.php";
 require_once "../model/User.php";
@@ -18,7 +12,10 @@ try{
   $User->connectDb();
 
   //一般登録
-  if($_POST){
+  if(empty($_POST['name'] || $_POST['email'] || $_POST['password'])){
+    header('Location:login.php');
+    exit;
+  }else{
     $User->addOrdinary($_POST);
   }
 }

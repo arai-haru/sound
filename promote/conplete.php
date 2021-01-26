@@ -1,10 +1,4 @@
 <?php
-$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
-
-if($referer != "http://".$_SERVER["HTTP_HOST"]."/php_code/promote/promote_confirm.php"){
-  header('Location:../promote/login.php');
-  exit;
-}
 
 require_once "../config/config.php";
 require_once "../model/Promote_user.php";
@@ -14,7 +8,10 @@ try{
   $User->connectDb();
 
   //主催者登録処理
-  if($_POST){
+  if(empty($_POST['name'] || $_POST['email'] || $_POST['password'])){
+    header('Location:login.php');
+    exit;
+  }else{
     $User->addPromote($_POST);
   }
 
